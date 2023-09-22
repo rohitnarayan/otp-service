@@ -16,11 +16,9 @@ type LoggerConfig struct {
 }
 
 type ServerConfig struct {
-	Name         string
-	Port         int
-	ReadTimeout  time.Duration
-	WriteTimeout time.Duration
-	IdleTimeout  time.Duration
+	Name      string
+	Port      int
+	OTPLength int
 }
 
 type DatabaseConfig struct {

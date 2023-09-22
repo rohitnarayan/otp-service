@@ -46,8 +46,9 @@ func Init() {
 			},
 		},
 		Server: &ServerConfig{
-			Name: getStringOrPanic("APP_NAME"),
-			Port: getIntOrPanic("PORT"),
+			Name:      getStringOrPanic("APP_NAME"),
+			Port:      getIntOrPanic("PORT"),
+			OTPLength: getIntOrPanic("OTP_LENGTH"),
 		},
 		Logger: &LoggerConfig{
 			Level:  getStringOrPanic("LOG_LEVEL"),
