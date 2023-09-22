@@ -3,9 +3,9 @@ package store
 import "time"
 
 type OTPModel struct {
-	Otp       string    `json:"otp"`
-	UserID    string    `json:"user_id"`
-	CreatedAt time.Time `json:"created_at"`
-	UpdatedAt time.Time `json:"updated_at"`
-	Status    string    `json:"status"`
+	Otp       string    `db:"otp"`
+	UserID    string    `db:"user_id"`
+	CreatedAt time.Time `db:"created_at"`
+	UpdatedAt time.Time `db:"updated_at"`
+	Status    string    `db:"status"`
 }

@@ -13,9 +13,12 @@ import (
 var (
 	insertOTPQuery = &postgres.Query{
 		Name:  "insert otp",
-		Query: "INSERT INTO otp VALUES($1, $2, $3, $4, $5)",
+		Query: "INSERT INTO otp(otp, user_id, created_at, updated_at, status) VALUES($1, $2, $3, $4, $5)",
 	}
 )
+
+// select * from otp where userid=$1 AND status=created limit 1;
+// update otp set status=expired/validated whre
 
 type otpStore struct {
 	readDB  *sqlx.DB
