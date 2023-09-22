@@ -8,7 +8,7 @@ APP_EXECUTABLE="out/otp-service"
 
 build:
 	mkdir -p out/
-	go build -o $(APP_EXECUTABLE) ./cmd/*.go
+	go build -o $(APP_EXECUTABLE) ./*.go
 
 fmt:
 	go fmt ./...
