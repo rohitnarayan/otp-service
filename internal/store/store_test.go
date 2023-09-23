@@ -5,7 +5,7 @@ import (
 	"log"
 	"testing"
 	"time"
-	
+
 	"github.com/stretchr/testify/assert"
 
 	"github.com/rohitnarayan/otp-service/internal/config"
