@@ -35,12 +35,7 @@ func NewDB(cfg *config.PostgresConfig) (*sqlx.DB, error) {
 }
 
 func ConnectionURL(cfg *config.PostgresConfig) string {
-	return fmt.Sprintf("postgres://%s:%s@%s:%d/%s?sslmode=disable",
-		cfg.Username,
-		cfg.Password,
-		cfg.Host,
-		cfg.Port,
-		cfg.DatabaseName)
+	return fmt.Sprintf("user=%s password=%s host=%s port=%d sslmode=disable", cfg.Username, cfg.Password, cfg.Host, cfg.Port)
 }
 
 func Get(ctx context.Context, readDB *sqlx.DB, timeout time.Duration, dest interface{}, q *Query) error {

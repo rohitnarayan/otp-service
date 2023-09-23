@@ -13,6 +13,9 @@ build:
 fmt:
 	go fmt ./...
 
+migration.create:
+	$(APP_EXECUTABLE) create-migration
+
 db.setup: db.create db.migrate
 
 db.create:
