@@ -13,8 +13,6 @@ import (
 )
 
 func Server() {
-	config.Init()
-
 	db, err := postgres.NewDB(config.App.Database.Postgres)
 	if err != nil {
 		log.Fatalf("failed to init db")
